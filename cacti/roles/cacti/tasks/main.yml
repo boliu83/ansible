@@ -1,4 +1,9 @@
 - name: install packages
   yum:
-    name: ['httpd', 'php', 'php-mysql', 'mariadb-server', 'mariadb', 'net-snmp']
+    name: ['httpd', 'php', 'mariadb-server', 'mariadb', 'net-snmp', 'php-mysql', 'openssl-devel', 'mariadb-devel']
     state: present
+
+- name: start service
+  service:
+    name: httpd
+    state: started
