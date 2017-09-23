@@ -1,0 +1,5 @@
+- name: install software
+  hosts: all
+  become: yes
+  roles:
+    - cacti

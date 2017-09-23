@@ -1,0 +1,4 @@
+- name: install packages
+  yum:
+    name: ['httpd', 'php', 'php-mysql', 'mariadb-server', 'mariadb', 'net-snmp']
+    state: present
