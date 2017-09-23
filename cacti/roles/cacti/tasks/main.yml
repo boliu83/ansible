@@ -1,3 +1,7 @@
+- name: remove unwanted mysql packages
+  yum:
+    name: [ 'mysql-community-libs', 'mysql-community-libs-compat', 'mysql-community-common']    state: removed
+
 - name: install packages
   yum:
     name: ['httpd', 'php', 'mariadb-server', 'mariadb', 'net-snmp', 'php-mysql', 'openssl-devel', 'mariadb-devel']
